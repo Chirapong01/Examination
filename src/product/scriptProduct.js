@@ -150,16 +150,54 @@ function recommendedDragging (e){
     }
    
 }
+function phoneDrageRecentlyStart(e){
+    isDrag = true;
+    prevPageX = e.touches[0].pageX
+    prevScroll = sliderRecently.scrollLeft
+ 
+}
+
+function phoneRecentlyDragging (e){
+    let position = e.touches[0].pageX - prevPageX
+    if(isDrag == true){
+        e.preventDefault()
+        sliderRecently.scrollLeft = prevScroll - position
+    }else{
+        return
+    }
+   
+}
+
+function phoneDrageRecommendedStart(e){
+    isDrag = true;
+    prevPageX = e.touches[0].pageX
+    prevScroll = sliderRecommended.scrollLeft
+ 
+}
+
+function phoneRecommendedDragging (e){
+    let position = e.touches[0].pageX - prevPageX
+    if(isDrag == true){
+        e.preventDefault()
+        sliderRecommended.scrollLeft = prevScroll - position
+    }else{
+        return
+    }
+   
+}
+
 
 sliderRecently.addEventListener("mousedown",drageRecentlyStart)
 sliderRecently.addEventListener("mouseup",drageStop)
+sliderRecently.addEventListener("mouseleave",drageStop)
 sliderRecently.addEventListener("mousemove",recentlyDragging)
-sliderRecently.addEventListener("touchstart",drageRecentlyStart)
+sliderRecently.addEventListener("touchstart",phoneDrageRecentlyStart)
 sliderRecently.addEventListener("touchend",drageStop)
-sliderRecently.addEventListener("touchmove",recentlyDragging)
+sliderRecently.addEventListener("touchmove",phoneRecentlyDragging)
 sliderRecommended.addEventListener("mousedown",drageRecommendedStart)
 sliderRecommended.addEventListener("mouseup",drageStop)
+sliderRecommended.addEventListener("mouseleave",drageStop)
 sliderRecommended.addEventListener("mousemove",recommendedDragging)
-sliderRecommended.addEventListener("touchstart",drageRecommendedStart)
+sliderRecommended.addEventListener("touchstart",phoneDrageRecommendedStart)
 sliderRecommended.addEventListener("touchend",drageStop)
-sliderRecommended.addEventListener("touchmove",recommendedDragging)
+sliderRecommended.addEventListener("touchmove",phoneRecommendedDragging)

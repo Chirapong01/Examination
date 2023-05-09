@@ -15,7 +15,7 @@ img{
 .contrain-catagories {
     margin-top: 20px;
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     flex-direction: row;
 }
 
