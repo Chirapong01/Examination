@@ -79,6 +79,10 @@ img{
     grid-template-columns: repeat(6,1fr);
 }
 
+.grid-icon .grid-item{
+    height: 50px;
+}
+
 @media screen  and (max-width:860px){
     .title {
     margin-top: 10%;
@@ -213,5 +217,26 @@ img{
         margin-top: 20px;
         padding: 10px;
         width: 90px;
+    }
+}
+/*360px*/
+@media screen and (max-width:360px){
+    .logo{
+        margin: 1rem !important;
+    }
+        .f1{
+            font-size: 20px;
+        }
+        .f2{
+            font-size: 14px;
+        }
+    .btn {
+        margin-top: 8px !important;
+        width: 160px;
+        height: 38px;
+        color: black;
+        font-size: 15px;
+        font-weight: bold;
+        border: 3px solid rgb(0, 0, 0);
     }
 }

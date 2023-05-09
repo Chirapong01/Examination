@@ -14,7 +14,7 @@ body {
     border-radius: 15px;
     margin-left: 2%;
 }
-.top-nav img{
+.top-nav img , .contrain-share img{
     cursor: pointer;
     pointer-events:all
 }
@@ -213,7 +213,6 @@ span {
 
 .grid-item {
     width: 44px;
-    height: 66px;
     text-align: center;
     position: relative;
 }
@@ -470,11 +469,24 @@ span {
     color: orange;
 }
 
+.pointer{
+    pointer-events: all;
+    cursor: pointer;
+}
+
 .recently-list{
     margin-top: 20px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+}
+
+.border-ra10{
+    border-radius: 10px;
+}
+
+.recently-text{
+    text-align: center; 
+    height: auto
 }
 
 .contrain-recently {
@@ -494,7 +506,6 @@ span {
     overflow-x: hidden;
     margin-top: 20px;
     display: flex;
-    /* justify-content: center; */
     flex-direction: row;
 }
 
@@ -502,6 +513,11 @@ span {
     padding: 25px;
     display: flex;
     flex-direction: column;
+}
+
+.recommend-text{
+    text-align: center;
+    height: 100px;
 }
 
 .hide-bar {
@@ -570,8 +586,7 @@ span {
 }
 
 .footer-item .grid-icon {
-    grid-template-columns: repeat(5, 1fr);
-    opacity: 0.7;
+    grid-template-columns: repeat(6, 1fr);
 }
 
 .footer-logo {
