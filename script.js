@@ -31,3 +31,6 @@ function recommendedDragging (e){
 sliderRecommended.addEventListener("mousedown",drageRecommendedStart)
 sliderRecommended.addEventListener("mouseup",drageStop)
 sliderRecommended.addEventListener("mousemove",recommendedDragging)
+sliderRecommended.addEventListener("touchstart",drageRecommendedStart)
+sliderRecommended.addEventListener("touchend",drageStop)
+sliderRecommended.addEventListener("touchmove",recommendedDragging)
