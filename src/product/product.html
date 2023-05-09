@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/src/product/product.css">
+    <link href="https://fonts.cdnfonts.com/css/utendo" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+    <title>My Toys</title>
+</head>
+
+<body>
+    <div class="top-nav">
+        <div class="row m-0">
+            <div class="col-2" style="display: flex;">
+                <div class="hide-list">
+                    <span class="material-symbols-outlined" style="font-size: 38px; cursor: pointer;"
+                        onclick="opensidebar('open')">
+                        reorder
+                    </span>
+                </div>
+                <img  src="/icon/logo.png" alt="">
+            </div>
+            <div class="col">
+                <div class="search">
+                    <span class="material-symbols-outlined " style="font-size: 35px; margin-top: 2px;">
+                        search
+                    </span>
+                    <input placeholder="Search" class="input-search px-2" type="text">
+                </div>
+                <div class="mt-3 nav-list">
+                    <div class="list-item">
+                        <p>Toys</p>
+                    </div>
+                    <div class="list-item">
+                        <p>Child Development</p>
+                    </div>
+                    <div class="list-item">
+                        <p>Forest of Play</p>
+                    </div>
+                    <div class="list-item">
+                        <p>Membership</p>
+                    </div>
+                    <div class="list-item">
+                        <p>About Us</p>
+                    </div>
+                    <div class="list-item">
+                        <p>Contact</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="nav-icon">
+                    <span class="material-symbols-outlined m-1">
+                        <span class="material-symbols-outlined">
+                            favorite
+                        </span>
+                    </span>
+                    <p> Favorite</p>
+                </div>
+                <div class="nav-icon">
+                    <span class="material-symbols-outlined m-1">
+                        shopping_cart_checkout
+                    </span>
+                    <p>Cart</p>
+                </div>
+                <div class="nav-icon">
+                    <span class="material-symbols-outlined m-1 ">
+                        person
+                    </span>
+                    <p>Account</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contrainer-body">
+        <div class="row justify-content-md-center h-100px">
+            <div class="col-md-auto mb-3">
+                <div class="present">
+                    <div class="next" onclick="arrowChange('next')">
+                        <span class="material-symbols-outlined arrow-icon" style="font-size: 28px;">
+                            arrow_forward_ios
+                        </span>
+                    </div>
+                    <div class="prev" onclick="arrowChange('prev')">
+                        <span class="material-symbols-outlined arrow-icon " style="font-size: 28px;">
+                            arrow_back_ios
+                        </span>
+                    </div>
+                    <img class="slides" src="/img/p_00.webp" style="display: block;">
+                    <img class="slides" src="/img/p_01.webp" style="display: none;">
+                    <img class="slides" src="/img/p_02.webp" style="display: none;">
+                    <img class="slides" src="/img/p_03.webp" style="display: none;">
+                    <img class="slides" src="/img/p_04.webp" style="display: none;">
+                    <img class="slides" src="/img/p_05.webp" style="display: none;">
+                    <img class="slides" src="/img/p_06.webp" style="display: none;">
+                    <img class="slides" src="/img/p_07.webp" style="display: none;">
+                    <img class="slides" src="/img/p_08.webp" style="display: none;">
+                    <img class="slides" src="/img/p_09.webp" style="display: none;">
+                </div>
+                <div class="slidot mt-2 ">
+                    <div>
+                        <span class="material-symbols-outlined list-icon slider" onclick="changePic(0)">
+                            adjust
+                        </span>
+
+                    </div>
+                    <div>
+                        <span class="material-symbols-outlined list-icon slider" onclick="changePic(1)">
+                            fiber_manual_record
+                        </span>
+                    </div>
+                    <div>
+                        <span class="material-symbols-outlined list-icon slider" onclick="changePic(2)">
+                            fiber_manual_record
+                        </span>
+                    </div>
+                    <div>
+                        <span class="material-symbols-outlined list-icon slider" onclick="changePic(3)">
+                            fiber_manual_record
+                        </span>
+                    </div>
+                    <div>
+                        <span class="material-symbols-outlined list-icon slider" onclick="changePic(4)">
+                            fiber_manual_record
+                        </span>
+                    </div>
+                    <div>
+                        <span class="material-symbols-outlined list-icon slider" onclick="changePic(5)">
+                            fiber_manual_record
+                        </span>
+                    </div>
+                    <div>
+                        <span class="material-symbols-outlined list-icon slider" onclick="changePic(6)">
+                            fiber_manual_record
+                        </span>
+                    </div>
+                    <div>
+                        <span class="material-symbols-outlined list-icon slider" onclick="changePic(7)">
+                            fiber_manual_record
+                        </span>
+                    </div>
+                    <div>
+                        <span class="material-symbols-outlined list-icon slider" onclick="changePic(8)">
+                            fiber_manual_record
+                        </span>
+                    </div>
+                    <div>
+                        <span class="material-symbols-outlined list-icon slider" onclick="changePic(9)">
+                            fiber_manual_record
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-auto mb-3">
+                <div class="present-detail">
+                    <div>
+                        <h2> Victorian Dollhouse</h2>
+                    </div>
+                    <div>
+                        <h1 style="line-height: 0.5;">11,400.00 ฿</h1>
+                    </div>
+                    <div class="mt-3">SKU:7124</div>
+                    <div class="mb-2">Shipping calculated checkout</div>
+                    <div class="grid-icon mt-2">
+                        <div class="grid-item">
+                            <img class="w-100" src="/icon/Pretend_Play_icon.png" alt="">
+                        </div>
+                        <div class="grid-item">
+                            <div class="text-weight mt-2" style="font-size: 0.4rem; color: #ffffff;"> 23.387 <br>
+                                <a style="font-size: xx-small; color:#8CC63F; "> kg</a>
+                            </div>
+                            <img class="w-100" src="/icon/Carbon_Green_icon_no_text.png" alt="">
+                        </div>
+                    </div>
+                    <div class="grid-icon mt-2 side-icon-respon display-hide">
+                        <div class="grid-item hovertext p-1">
+                            <img class="w-100" src="/icon/Imagination.svg">
+                            <div class="p-2 pb-1"> Imagination</div>
+                        </div>
+                        <div class="grid-item hovertext p-1">
+                            <img class="w-100" src="/icon/creative.svg">
+                            <div class="p-2 pb-1"> Creative</div>
+                        </div>
+                        <div class="grid-item hovertext p-1">
+                            <img class="w-100" src="/icon/emotional.svg">
+                            <div class="p-2 pb-1"> Emotional</div>
+                        </div>
+                        <div class="grid-item hovertext p-1">
+                            <img class="w-100" src="/icon/social.svg">
+                            <div class="p-2 pb-1"> Social</div>
+                        </div>
+                        <div class="grid-item hovertext p-1">
+                            <img class="w-100" src="/icon/communication.svg">
+                            <div class="p-2 pb-1"> Language & Communication</div>
+                        </div>
+                        <div class="grid-item hovertext p-1">
+                            <img class="w-100" src="/icon/Coordination.svg">
+                            <div class="p-2 pb-1"> Coordination</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 favo">
+                        <h3> 3Year+ </h3>
+                        <div class="favo-right mt-1">
+                            <span class="material-symbols-outlined" style="color:red">
+                                favorite
+                            </span>
+                            <div>
+                                Add to favorite
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quantity mt-2">
+                        <div class="p-1"> Quantity </div>
+                        <div class="input-quantity">
+                            <button style="margin-right: -1px;" onclick="quantity('remove')">
+                                <span class="material-symbols-outlined " style="padding-top: 2px;">
+                                    remove
+                                </span>
+                            </button>
+                            <input class="inputQ" id="count" type="text" value="1" maxlength="2">
+                            <button style="margin-left: -1px;" onclick="quantity('add')">
+                                <span class="material-symbols-outlined" style="padding-top: 2px;">
+                                    add
+                                </span>
+                            </button>
+                        </div>
+                        <div class="p-1"> pieces </div>
+                    </div>
+                    <div class="btn-product mt-5">
+                        <button class="btn-cart">
+                            <span class="material-symbols-outlined m-1">
+                                shopping_cart_checkout
+                            </span>
+                            <div class="text-cart m-1">Add To Cart</div>
+                        </button>
+                        <button class="btn-buy text-cart">
+                            Buy Now
+                        </button>
+                    </div>
+                    <div class="rating mt-5">
+                        <div class="star" onclick="star(1)">&#9734</div>
+                        <div class="star" onclick="star(2)">&#9734</div>
+                        <div class="star" onclick="star(3)">&#9734</div>
+                        <div class="star" onclick="star(4)">&#9734</div>
+                        <div class="star" onclick="star(5)">&#9734</div>
+                        <div style="padding-left: 30px;">Ratting</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-auto side-icon">
+                <div class="w-100 p-1 hovertext">
+                    <img src="/icon/Imagination.svg">
+                    <div class="p-2 pb-1"> Imagination</div>
+                </div>
+                <div class="w-100 p-1 hovertext">
+                    <img src="/icon/creative.svg">
+                    <div class="p-2 pb-1"> Creative</div>
+                </div>
+                <div class="w-100 p-1 hovertext">
+                    <img src="/icon/emotional.svg">
+                    <div class="p-2 pb-1"> Emotional</div>
+                </div>
+                <div class="w-100 p-1 hovertext">
+                    <img src="/icon/social.svg">
+                    <div class="p-2 pb-1"> Social</div>
+                </div>
+                <div class="w-100 p-1 hovertext">
+                    <img src="/icon/communication.svg">
+                    <div class="p-2 pb-1"> Language & Communication</div>
+                </div>
+                <div class="w-100 p-1 hovertext">
+                    <img src="/icon/Coordination.svg">
+                    <div class="p-2 pb-1"> Coordination</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="contrain-share">
+            <div class="title-Share">
+                <span class="material-symbols-outlined" style="font-size:25px; font-weight: bold; color: black;">
+                    share
+                </span>
+            </div>
+            <div class="m-2">
+                <img class="w-100" src="/icon/i01.png" alt="">
+            </div>
+            <div class="m-2">
+                <img class="w-100" src="/icon/i02.png" alt="">
+            </div>
+            <div class="m-2">
+                <img class="w-100" src="/icon/i03.png" alt="">
+            </div>
+            <div class="m-2">
+                <img class="w-100" src="/icon/i04.png" alt="">
+            </div>
+            <div class="m-2">
+                <img class="w-100" src="/icon/i05.png" alt="">
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="contrain-description">
+                <div class="description ">
+                    <div class="listdescrip p-3 toggle-border" onclick="selectDescription(0)"> Description</div>
+                    <div class="listdescrip p-3" onclick="selectDescription(1)"> child Development</div>
+                    <div class="listdescrip p-3" onclick="selectDescription(2)"> Product info</div>
+                    <div class="listdescrip p-3" onclick="selectDescription(3)"> Download </div>
+                </div>
+                <div class="contrain contrain-toggle">
+                    <div class="mt-3">
+                        This dollhouse has 3 floors including the attic. Each floor is accessible with opening panels
+                        and
+                        realistic sashes that slide open and shut. Additional attic space can also be made into any kind
+                        of
+                        room
+                        your child desires .
+                        <ul>
+                            <li class="mt-2">
+                                Suitable for ages 3 years and older
+                            </li>
+                            <li>
+                                The most popular PlanToys dollhouse available with 3 floors (including an attic),
+                                opening
+                                panels
+                                and functional sashes that slide open and shut
+                            </li>
+                            <li>
+                                Compatible with all other PlanToys dollhouses and furniture. Made to 1:12 Scale
+                            </li>
+                            <li>
+                                Sustainably made in Thailand using chemical-free rubberwood, formaldehyde-free glue,
+                                organic
+                                pigments and water-based dyes.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="contrain ">
+                    <div class="mt-3">
+                        <ul>
+                            <h3>Factors for Child Development:</h3> <br>
+                            Creative <br>
+                            Imagination <br>
+                            Social <br>
+                            Language & Communication <br>
+                            Coordination <br>
+                            Emotional <br>
+                        </ul>
+                    </div>
+                </div>
+                <div class="contrain">
+                    <div class="mt-3">
+                        <ul>
+                            <h3> Package Dimension (W x L x H) : </h3> <br>
+                            29.8 in X 9.13 in X 18.2 in <br>
+                            75.69 cm X 23.19 cm X 46.2 cm <br>
+                            <br>
+                            <h3>Product Dimension (W x L x H) :</h3> <br>
+                            24.76 in X 13.19 in X 28.03 in <br>
+                            62.9 cm X 33.5 cm X 71.2 cm <br>
+                            <br>
+                            <h3> Package Weight : </h3> <br>
+                            30.33 lb <br>
+                            13.76 kg <br>
+                            <br>
+                            <h3>*The biggest part: </h3> <br>
+                            Side Frame <br>
+                        </ul>
+                    </div>
+                </div>
+                <div class="contrain">
+                    <div class="mt-3">
+                        <div class="m-2 list-download">
+                            <span class="material-symbols-outlined">
+                                download
+                            </span>
+                            <p class="mt-1">Test Report(ASTM)</p>
+                        </div>
+                        <div class="m-2 list-download">
+                            <span class="material-symbols-outlined">
+                                download
+                            </span>
+                            <p class="mt-1">Test Report(EN71)</p>
+                        </div>
+                        <div class="m-2 list-download">
+                            <span class="material-symbols-outlined">
+                                download
+                            </span>
+                            <p class="mt-1">Download Assembly Instruction</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row p-o mt-4">
+            <h3 class="mt-5" style="text-align: center;">Customer reviews</h3>
+            <div class="contrain-review mt-3">
+                <div class="star-left m-3">
+                    <div class=" mt-2" style="display: flex;">
+                        <p style="font-size: 32px;"> 4.5  </p>
+                        <p style="margin-top: 2px;"> out of 5 </p>
+                    </div>
+                    <span class="material-icons star-review">
+                        star
+                    </span>
+                    <span class="material-icons star-review">
+                        star
+                    </span>
+                    <span class="material-icons star-review">
+                        star
+                    </span>
+                    <span class="material-icons star-review">
+                        star
+                    </span>
+                    <span class="material-icons star-review">
+                        star_half
+                    </span>
+                </div>
+                <div class="star-right">
+                    <div class="list-star ">
+                        <span class="material-icons star-review">
+                            star
+                        </span>
+                        <span class="material-icons star-review">
+                            star
+                        </span>
+                        <span class="material-icons star-review">
+                            star
+                        </span>
+                        <span class="material-icons star-review">
+                            star
+                        </span>
+                        <span class="material-icons star-review">
+                            star
+                        </span>
+                        <span class="fn-14">(1)
+                        </span>
+
+                    </div>
+                    <div class="list-star ">
+                        <span class="material-icons star-review">
+                            star
+                        </span>
+                        <span class="material-icons star-review">
+                            star
+                        </span>
+                        <span class="material-icons star-review">
+                            star
+                        </span>
+                        <span class="material-icons star-review">
+                            star
+                        </span>
+                        <span class="material-icons star-review">
+                            star_border
+                        </span>
+                        <span class="fn-14">(1)</span>
+                    </div>
+                    <div class="list-star ">
+                        <span class="material-icons star-review">
+                            star
+                        </span>
+                        <span class="material-icons star-review">
+                            star
+                        </span>
+                        <span class="material-icons star-review">
+                            star
+                        </span>
+                        <span class="material-icons star-review">
+                            star_border
+                        </span>
+                        <span class="material-icons star-review">
+                            star_border
+                        </span>
+                        <span class="fn-14">(0)</span>
+                    </div>
+                    <div class="list-star">
+                        <span class="material-icons star-review">
+                            star
+                        </span>
+                        <span class="material-icons star-review">
+                            star
+                        </span>
+                        <span class="material-icons star-review">
+                            star_border
+                        </span>
+                        <span class="material-icons star-review">
+                            star_border
+                        </span>
+                        <span class="material-icons star-review">
+                            star_border
+                        </span>
+                        <span class="fn-14">(0)</span>
+                    </div>
+                    <div class="list-star ">
+                        <span class="material-icons star-review">
+                            star
+                        </span>
+                        <span class="material-icons star-review">
+                            star_border
+                        </span>
+                        <span class="material-icons star-review">
+                            star_border
+                        </span>
+                        <span class="material-icons star-review">
+                            star_border
+                        </span>
+                        <span class="material-icons star-review">
+                            star_border
+                        </span>
+                        <span class="fn-14">(0)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="filter mt-5">
+                <div class="contrain-review">
+                    <div class="filter-title"> Review</div>
+                    <div class="filter-icon">
+                        <span class="material-icons">
+                            filter_alt
+                        </span>
+                        <p style="margin-top: 2px;"> Filter</p>
+                    </div>
+                </div>
+               
+            </div>
+
+            <div class="contrain-review list-review mt-5">
+                <div class="list-star">
+                    <span class="material-icons star-review">
+                        star
+                    </span>
+                    <span class="material-icons star-review">
+                        star
+                    </span>
+                    <span class="material-icons star-review">
+                        star
+                    </span>
+                    <span class="material-icons star-review">
+                        star
+                    </span>
+                    <span class="material-icons star-review">
+                        star
+                    </span>
+                </div>
+
+                <span style="display: flex; margin-left: -10px;">
+                    <span class="material-symbols-outlined m-1 ">
+                        person
+                    </span>
+                    <p style="margin-top: 8px;"> By Mr.Bean</p>
+                </span>
+                <div>
+                    Good!
+                </div>
+            </div>
+            <div class="contrain-review  list-review mb-5" style="border-top: 1px solid rgb(206, 201, 201)">
+                <div class="list-star mt-5">
+                    <span class="material-icons star-review">
+                        star
+                    </span>
+                    <span class="material-icons star-review">
+                        star
+                    </span>
+                    <span class="material-icons star-review">
+                        star
+                    </span>
+                    <span class="material-icons star-review">
+                        star
+                    </span>
+                    <span class="material-icons star-review">
+                        star_border
+                    </span>
+                </div>
+
+                <span style="display: flex; margin-left: -10px;">
+                    <span class="material-symbols-outlined m-1 ">
+                        person
+                    </span>
+                    <p style="margin-top: 8px;"> By Mr.Silver</p>
+                </span>
+                <div>
+                    Grate!
+                </div>
+            </div>
+        </div>
+
+        <div class="row p-0 mt-4">
+            <h3 class="mt-5" style="text-align: center;">Recently viewed</h3>
+            <div class="contrain-recently">
+                <div class="recently-list m-5">
+                    <div class="pic-recen">
+                        <img class="w-100" style="border-radius: 10px;" src="/img/S220201_-_Packshot_-_01.webp" alt="">
+                    </div>
+                    <div class="mt-3 pic-recen mb-5" style="text-align: center; height: auto">
+                        <div>
+                            Baby Gift Set - Stimulability auditory set<br>
+                            1,650.00฿
+    
+                        </div>
+                    </div>
+                </div>
+                <div class="recently-list m-5">
+                    <div class="pic-recen">
+                        <img class="w-100" style="border-radius: 10px;" src="/img/S220101_-_Packshot_-_01.webp" alt="">
+                    </div>
+                    <div class="mt-3 pic-recen mb-5" style="text-align: center; height: auto">
+                        <div>
+                            Baby Gift Set - Stimulability sensory set <br>
+                            1,740.00 ฿
+    
+                        </div>
+                    </div>
+                </div>
+                <div class="recently-list m-5">
+                    <div class="pic-recen">
+                        <img class="w-100" style="border-radius: 10px;" src="/img/3451_-_Packshot_-_01.webp" alt="">
+                    </div>
+                    <div class="mt-3 pic-recen mb-5" style="text-align: center; height: auto">
+                        <div>
+                            Doctor Set <br>
+                            1,200.00 ฿
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row  my-4 p-4">
+            <h3 style=" text-align: center; ">Recommended for Your Kid</h3>
+            <div class="contrain-recommend">
+                <div class="recommend-list">
+                    <div class="pic-recen">
+                        <img class="w-100" style="border-radius: 10px;" src="/img/recom01.webp" alt="">
+                    </div>
+
+                    <div class="mt-3 pic-recen" style="text-align: center; height: 100px;">
+                        Dollhouse Figure - Child <br>
+                        250.00฿
+                    </div>
+                </div>
+                <div class="recommend-list">
+                    <div class="pic-recen">
+                        <img class="w-100" style="border-radius: 10px;" src="/img/recom02.webp" alt="">
+                    </div>
+
+                    <div class="mt-3 pic-recen" style="text-align: center; height: 100px;">
+                        Victorian Furniture Set <br>
+                        3,000.00฿
+                    </div>
+                </div>
+                <div class="recommend-list">
+                    <div class="pic-recen">
+                        <img class="w-100" style="border-radius: 10px;" src="/img/recom03.webp" alt="">
+                    </div>
+
+                    <div class="mt-3 pic-recen" style="text-align: center; height: 100px;">
+                        Farmer <br>
+                        240.00฿
+                    </div>
+                </div>
+                <div class="recommend-list fade-small ">
+                    <div class="pic-recen">
+                        <img class="w-100" style="border-radius: 10px;" src="/img/recom04.webp" alt="">
+                    </div>
+
+                    <div class="mt-3 pic-recen" style="text-align: center; height: 100px;">
+                        My First Dollhouse <br>
+                        6,000.00฿
+                    </div>
+                </div>
+                <div class="recommend-list fade-big">
+                    <div class="pic-recen">
+                        <img class="w-100" style="border-radius: 10px;" src="/img/recom05.webp" alt="">
+                    </div>
+
+                    <div class="mt-3 pic-recen" style="text-align: center; height: 100px;">
+                        Victorian Furniture Set <br>
+                        3,000.00฿
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contrain-footer">
+        <div class="row">
+            <div class="col footer-item">
+                <h>Menu</h> <br>
+                Product <br>
+                Child Development <br>
+                Blogs <br>
+                About us <br>
+                Contact Us <br>
+
+
+            </div>
+            <div class="col-4 footer-item">
+                <div class="row">
+                    <h>product categories</h> <br>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Active Play <br>
+                        Baby <br>
+                        Better Aging <br>
+                        Blocks & Construction <br>
+                        Games & Puzzles <br>
+                        Learing & Education br
+                    </div>
+                    <div class="col">
+                        Music <br>
+                        PlanHome <br>
+                        PlanMini <br>
+                        Pretend Play <br>
+                        Push & Pull <br>
+                        Water Play <br>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col footer-item">
+                <h>Corporate</h> <br>
+                About PlanToys <br>
+                Our Mission <br>
+                Our Sustainability <br>
+                Our History <br>
+                Our Awards <br>
+            </div>
+            <div class="col footer-item">
+                <h>Follow us </h>
+                <div class="grid-icon">
+                    <div class="grid-item p-1">
+                        <img class="w-100" src="/icon/i01.png" alt="">
+                    </div>
+                    <div class="grid-item p-1">
+                        <img class="w-100" src="/icon/i02.png" alt="">
+                    </div>
+                    <div class="grid-item p-1">
+                        <img class="w-100" src="/icon/i03.png" alt="">
+                    </div>
+                    <div class="grid-item p-1">
+                        <img class="w-100" src="/icon/i05.png" alt="">
+                    </div>
+                    <div class="grid-item p-1">
+                        <img class="w-100" src="/icon/i06.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col footer-item ">
+                <div class="footer-logo">
+                    <img class="w-100" src="/img/image001.png" alt="">
+                </div>
+                <p>Better Kids, <br> Better World</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- hidden -->
+    <div class="hide-bar">
+        <div class="close-icon">
+            <span class="material-symbols-outlined" onclick="opensidebar('close')" style="font-size: 32px;">
+                close
+            </span>
+        </div>
+        <div class="list-bar">
+            <div class="item">
+                Toys
+            </div>
+            <div class="item">
+                Child Development
+            </div>
+            <div class="item">
+                Forest of Play
+            </div>
+            <div class="item">
+                Membership
+            </div>
+            <div class="item">
+                About Us
+            </div>
+            <div class="item">
+                Contact
+            </div>
+        </div>
+    </div>
+</html>
+<script src="/script.js"></script>
