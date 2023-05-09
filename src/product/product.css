@@ -15,6 +15,10 @@ body {
     margin-left: 2%;
 }
 
+img{
+    pointer-events: none;
+}
+
 span,
 img {
     -webkit-user-select: none;
@@ -184,7 +188,6 @@ span {
 .present img {
     margin-top: 5rem;
     width: 35rem;
-
     /* border: 1px solid black; */
 
 }
@@ -471,7 +474,7 @@ span {
 }
 
 .contrain-recently {
-    justify-content: center;
+    overflow-x: hidden;
     display: flex;
      flex-direction: row;
 }
@@ -484,9 +487,10 @@ span {
 }
 
 .contrain-recommend {
+    overflow-x: hidden;
     margin-top: 20px;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     flex-direction: row;
 }
 
@@ -671,9 +675,7 @@ span {
         padding: 10px;
     }
 
-    .fade-big {
-        display: none;
-    }
+  
 
     .present-detail {
         margin-top: 5rem;
@@ -747,10 +749,6 @@ span {
 
     .contrain-share div img:hover {
         height: 38px;
-    }
-
-    .fade-small {
-        display: none;
     }
 
     .contrain-description {
