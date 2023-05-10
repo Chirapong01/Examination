@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'WebTExam'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3BEBFF51537A42999A80E0592EEEF844 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B3CAF652EC8A4ACEA368CFE080DC1D0C }}
           package: .
