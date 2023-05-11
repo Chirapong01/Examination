@@ -1,11 +1,30 @@
-const nav = document.querySelector(".top-nav");
-let lasScrollY = window.scrollY;
+let nav = document.querySelector(".top-nav")
+let topnav = document.getElementsByClassName("top-nav")
+let search = document.getElementsByClassName("search")
+let navlist = document.getElementsByClassName("nav-list")
+let logo = document.getElementsByClassName("logo")
+let navicon = document.getElementsByClassName("nav-icon")
+let lasScrollY = window.scrollY
 
 
 window.addEventListener("scroll", () => {
     if (lasScrollY > 50) {
+        navlist[0].style.marginTop="30px";
+        search[0].style.display ="none"
+        topnav[0].style.height="70px"
+        logo[0].style.display ="none"
+        navicon[0].style.marginTop ="-15px"
+        navicon[1].style.marginTop ="-15px"
+        navicon[2].style.marginTop ="-15px"
         nav.classList.add("nav-fix")
     } else {
+        navlist[0].style.marginTop="1rem";
+        search[0].style.display ="flex"
+        topnav[0].style.height="auto"
+        logo[0].style.display ="block"
+        navicon[0].style.marginTop ="0px"
+        navicon[1].style.marginTop ="0px"
+        navicon[2].style.marginTop ="0px"
         nav.classList.remove("nav-fix")
     }
     lasScrollY = window.scrollY
