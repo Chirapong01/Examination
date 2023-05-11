@@ -92,7 +92,7 @@ span {
 
 .nav-icon {
     margin: 5px;
-    padding-top: 40px;
+    align-items: center;
     display: flex;
     margin-left: 10px;
     font-size: 22px;
@@ -101,7 +101,7 @@ span {
 }
 
 .nav-icon p {
-    padding-top: 3px;
+    padding-top: 25px;
     font-size: 16px;
 }
 
@@ -623,7 +623,7 @@ span {
     }
 
     .nav-icon {
-        padding-top: 35px;
+        padding-top: 5px;
     }
 
     .h-100px {
@@ -696,7 +696,6 @@ span {
         padding: 10px;
     }
 
-  
 
     .present-detail {
         margin-top: 5rem;
@@ -718,7 +717,7 @@ span {
     }
 
     .nav-icon {
-        padding-top: 30px;
+        padding-top: 20px;
     }
 
 }
@@ -761,7 +760,7 @@ span {
     }
 
     .search {
-        display: none;
+        display: none !important;
     }
 
     .footer-item .grid-item {

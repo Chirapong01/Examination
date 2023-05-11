@@ -9,13 +9,13 @@ let lasScrollY = window.scrollY
 
 window.addEventListener("scroll", () => {
     if (lasScrollY > 50) {
-        navlist[0].style.marginTop="30px";
+        navlist[0].style.marginTop="25px";
         search[0].style.display ="none"
         topnav[0].style.height="70px"
         logo[0].style.display ="none"
-        navicon[0].style.marginTop ="-15px"
-        navicon[1].style.marginTop ="-15px"
-        navicon[2].style.marginTop ="-15px"
+        navicon[0].style.marginTop ="0px"
+        navicon[1].style.marginTop ="0px"
+        navicon[2].style.marginTop ="0px"
         nav.classList.add("nav-fix")
     } else {
         navlist[0].style.marginTop="1rem";
