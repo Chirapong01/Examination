@@ -239,7 +239,8 @@
                                     remove
                                 </span>
                             </button>
-                            <input class="inputQ" id="count" type="text" value="1" maxlength="2">
+                            <input class="inputQ" id="count" type="text" value="1" maxlength="2"
+                                onchange="quantity('change')">
                             <button style="margin-left: -1px;" onclick="quantity('add')">
                                 <span class="material-symbols-outlined" style="padding-top: 2px;">
                                     add
@@ -255,7 +256,7 @@
                             </span>
                             <div class="text-cart m-1">Add To Cart</div>
                         </button>
-                        <button class="btn-buy text-cart">
+                        <button class="btn-buy text-cart" onclick="quantity()" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                             Buy Now
                         </button>
                     </div>
@@ -300,24 +301,37 @@
 
         <div class="contrain-share">
             <div class="title-Share">
-                <span class="material-symbols-outlined" style="font-size:25px; font-weight: bold; color: black;">
-                    share
-                </span>
+                <h5>share</h5>
             </div>
             <div class="m-2">
-                <img class="w-100" src="/icon/i01.png" alt="">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://webtexam.azurewebsites.net/src/product/product.html"
+                    target="_blank">
+                    <img class="w-100" src="/icon/i01.png" alt="">
+                </a>
             </div>
             <div class="m-2">
-                <img class="w-100" src="/icon/i02.png" alt="">
+                <a href="https://www.instagram.com/?url=https://webtexam.azurewebsites.net/src/product/product.html"
+                    target="_blank">
+                    <img class="w-100" src="/icon/i02.png" alt="">
+                </a>
             </div>
             <div class="m-2">
-                <img class="w-100" src="/icon/i03.png" alt="">
+                <a href="https://twitter.com/share?url=https://webtexam.azurewebsites.net/src/product/product.html"
+                    target="_blank">
+                    <img class="w-100" src="/icon/i03.png" alt="">
+                </a>
             </div>
             <div class="m-2">
-                <img class="w-100" src="/icon/i04.png" alt="">
+                <a href="http://pinterest.com/pin/create/button/?url=https://webtexam.azurewebsites.net/src/product/product.html"
+                    target="_blank">
+                    <img class="w-100" src="/icon/i04.png" alt="">
+                </a>
             </div>
             <div class="m-2">
-                <img class="w-100" src="/icon/i05.png" alt="">
+                <a href="https://social-plugins.line.me/lineit/share?url=https://webtexam.azurewebsites.net/src/product/product.html"
+                    target="_blank">
+                    <img class="w-100" src="/icon/i05.png" alt="">
+                </a>
             </div>
         </div>
 
@@ -325,7 +339,7 @@
             <div class="contrain-description">
                 <div class="description ">
                     <div class="listdescrip p-3 toggle-border" onclick="selectDescription(0)"> Description</div>
-                    <div class="listdescrip p-3" onclick="selectDescription(1)"> child Development</div>
+                    <div class="listdescrip p-3" onclick="selectDescription(1)"> Child Development</div>
                     <div class="listdescrip p-3" onclick="selectDescription(2)"> Product info</div>
                     <div class="listdescrip p-3" onclick="selectDescription(3)"> Download </div>
                 </div>
@@ -374,20 +388,21 @@
                 <div class="contrain">
                     <div class="mt-3">
                         <ul>
-                            <h3> Package Dimension (W x L x H) : </h3> <br>
+                            <h3> Package Dimension (W x L x H) : </h3>
                             29.8 in X 9.13 in X 18.2 in <br>
                             75.69 cm X 23.19 cm X 46.2 cm <br>
                             <br>
-                            <h3>Product Dimension (W x L x H) :</h3> <br>
+                            <h3>Product Dimension (W x L x H) :</h3>
                             24.76 in X 13.19 in X 28.03 in <br>
                             62.9 cm X 33.5 cm X 71.2 cm <br>
                             <br>
-                            <h3> Package Weight : </h3> <br>
+                            <h3> Package Weight : </h3>
                             30.33 lb <br>
                             13.76 kg <br>
                             <br>
-                            <h3>*The biggest part: </h3> <br>
+                            <h3>*The biggest part: </h3>
                             Side Frame <br>
+                            <br>
                         </ul>
                     </div>
                 </div>
@@ -614,7 +629,7 @@
             <div class="contrain-recently">
                 <div class="recently-list m-5">
                     <div class="pic-recen">
-                        <img class="w-100 border-ra10"  src="/img/5468_-_Packshot_-_01.webp" alt="">
+                        <img class="w-100 border-ra10" src="/img/5468_-_Packshot_-_01.webp" alt="">
                     </div>
                     <div class="mt-3 pic-recen mb-5 recently-text">
                         <div>
@@ -626,7 +641,7 @@
                 </div>
                 <div class="recently-list m-5">
                     <div class="pic-recen">
-                        <img class="w-100 border-ra10"  src="/img/S220201_-_Packshot_-_01.webp" alt="">
+                        <img class="w-100 border-ra10" src="/img/S220201_-_Packshot_-_01.webp" alt="">
                     </div>
                     <div class="mt-3 pic-recen mb-5 recently-text">
                         <div>
@@ -638,9 +653,9 @@
                 </div>
                 <div class="recently-list m-5">
                     <div class="pic-recen">
-                        <img class="w-100 border-ra10"  src="/img/S220101_-_Packshot_-_01.webp" alt="">
+                        <img class="w-100 border-ra10" src="/img/S220101_-_Packshot_-_01.webp" alt="">
                     </div>
-                    <div class="mt-3 pic-recen mb-5 recently-text" >
+                    <div class="mt-3 pic-recen mb-5 recently-text">
                         <div>
                             Baby Gift Set - Stimulability sensory set <br>
                             1,740.00 ฿
@@ -652,7 +667,7 @@
                     <div class="pic-recen">
                         <img class="w-100 border-ra10" src="/img/3451_-_Packshot_-_01.webp" alt="">
                     </div>
-                    <div class="mt-3 pic-recen mb-5 recently-text" >
+                    <div class="mt-3 pic-recen mb-5 recently-text">
                         <div>
                             Doctor Set <br>
                             1,200.00 ฿
@@ -662,9 +677,9 @@
                 </div>
                 <div class="recently-list m-5">
                     <div class="pic-recen">
-                        <img class="w-100 border-ra10"  src="/img/5359_-_Packshot_-_01.webp" alt="">
+                        <img class="w-100 border-ra10" src="/img/5359_-_Packshot_-_01.webp" alt="">
                     </div>
-                    <div class="mt-3 pic-recen mb-5 recently-text" >
+                    <div class="mt-3 pic-recen mb-5 recently-text">
                         <div>
                             My First Calendar <br>
                             690.00 ฿
@@ -679,7 +694,7 @@
             <div class="contrain-recommend">
                 <div class="recommend-list">
                     <div class="pic-recen">
-                        <img class="w-100 border-ra10"  src="/img/recom01.webp" alt="">
+                        <img class="w-100 border-ra10" src="/img/recom01.webp" alt="">
                     </div>
 
                     <div class="mt-3 pic-recen recommend-text">
@@ -689,10 +704,10 @@
                 </div>
                 <div class="recommend-list">
                     <div class="pic-recen">
-                        <img class="w-100 border-ra10"  src="/img/recom02.webp" alt="">
+                        <img class="w-100 border-ra10" src="/img/recom02.webp" alt="">
                     </div>
 
-                    <div class="mt-3 pic-recen recommend-text" >
+                    <div class="mt-3 pic-recen recommend-text">
                         Victorian Furniture Set <br>
                         3,000.00฿
                     </div>
@@ -702,7 +717,7 @@
                         <img class="w-100 border-ra10" src="/img/recom03.webp" alt="">
                     </div>
 
-                    <div class="mt-3 pic-recen recommend-text" >
+                    <div class="mt-3 pic-recen recommend-text">
                         Farmer <br>
                         240.00฿
                     </div>
@@ -712,34 +727,34 @@
                         <img class="w-100 border-ra10" src="/img/recom04.webp" alt="">
                     </div>
 
-                    <div class="mt-3 pic-recen recommend-text" >
+                    <div class="mt-3 pic-recen recommend-text">
                         My First Dollhouse <br>
                         6,000.00฿
                     </div>
                 </div>
                 <div class="recommend-list ">
                     <div class="pic-recen">
-                        <img class="w-100 border-ra10"  src="/img/recom05.webp" alt="">
+                        <img class="w-100 border-ra10" src="/img/recom05.webp" alt="">
                     </div>
 
-                    <div class="mt-3 pic-recen recommend-text" >
+                    <div class="mt-3 pic-recen recommend-text">
                         Victorian Furniture Set <br>
                         3,000.00฿
                     </div>
                 </div>
                 <div class="recommend-list">
                     <div class="pic-recen">
-                        <img class="w-100 border-ra10"  src="/img/recom06.webp" alt="">
+                        <img class="w-100 border-ra10" src="/img/recom06.webp" alt="">
                     </div>
 
-                    <div class="mt-3 pic-recen recommend-text" >
+                    <div class="mt-3 pic-recen recommend-text">
                         Creative Board <br>
                         1,200.00 ฿
                     </div>
                 </div>
                 <div class="recommend-list">
                     <div class="pic-recen">
-                        <img class="w-100 border-ra10"  src="/img/recom07.webp" alt="">
+                        <img class="w-100 border-ra10" src="/img/recom07.webp" alt="">
                     </div>
 
                     <div class="mt-3 pic-recen recommend-text">
@@ -852,6 +867,63 @@
             </div>
             <div class="item">
                 Contact
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade mt-5" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="border-bottom: 0px;">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="display:flex; flex-direction: column;">
+                    <div style="justify-content: center; text-align: center; ">
+                        <p class="mt-4" style="font-size: 24px;">Victorian Dollhouse</p>
+                        <img style="width: 50%;" src="/img/p_00.webp" alt="">
+                        <div class="mx-5 mt-3">
+                            <div class="order-tex">
+                                <a style="font-size: 20px; justify-content: start; ">Price</a>
+                                <a style="font-size: 20px; position: absolute; right: 0; ">11,400</a>
+                            </div>
+                            <div class="order-tex">
+                                <a style="font-size: 18px; justify-content: start; ">Sale Discount</a>
+                                <a style="font-size: 18px; position: absolute; right: 0; ">0</a>
+                            </div>
+                            <div class="order-tex">
+                                <a style="font-size: 18px; justify-content: start; ">Pieces</a>
+                                <a id="piece-model" style="font-size: 18px; position: absolute; right: 0; ">1</a>
+                            </div>
+                            <div class="order-tex" style=" border-top: 1px solid gray;">
+                                <div class="mt-3">
+                                    <a style="font-size: 20px; justify-content: start; ">Total</a>
+                                    <a id="total-model"
+                                        style="font-size: 20px;  position: absolute; right: 0; ">11,400</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border-top: 0px;">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#oder-success "
+                        data-bs-dismiss="modal">PLACE ORDER</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--alerts-->
+    <div class="modal fade " style="margin-top: 10rem;" id="oder-success" data-bs-backdrop="static"
+        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog" style="display:flex; justify-content: center; text-align: center;">
+            <div class="modal-content" style="width: 200px;">
+                <div class="modal-body  m-2" style="color:#198754;">
+                    <div>
+                       <h2> Order Success</h2> 
+                    </div>
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal" aria-label="Close">
+                        OK</button>
+                </div>
             </div>
         </div>
     </div>

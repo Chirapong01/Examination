@@ -412,6 +412,7 @@ span {
 .fn-14 {
     font-size: 14px;
     margin-top: 10px;
+    margin-left: 10px;
 }
 
 .filter {
@@ -497,6 +498,7 @@ span {
 }
 
 .pic-recen {
+    cursor: pointer;
     margin-top: 30px;
     display: block;
     width: 200px;
@@ -599,6 +601,12 @@ span {
 .footer-item p {
     font-size: 14px;
     font-weight: bold;
+}
+
+.order-tex{
+    line-height: 1.5rem;
+    display: flex; 
+    position: relative;
 }
 
 /*1320*/
