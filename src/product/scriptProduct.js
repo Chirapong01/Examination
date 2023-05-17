@@ -96,7 +96,6 @@ function quantity(index) {
         }
     }
     document.getElementById("count").value = piece
-    
     total = piece * 11400
     document.getElementById("piece-model").innerHTML = piece
     document.getElementById("total-model").innerHTML = dollarUSLocale.format(total)
