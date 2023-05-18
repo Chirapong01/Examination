@@ -217,6 +217,20 @@ function phoneRecommendedDragging(e) {
 
 }
 
+function favorite(){
+    icon = document.getElementsByClassName('favo-icon');
+    yes = document.getElementsByClassName('icon-yes');
+    if(count == 0){ 
+        icon[0].style.display = 'block'
+        icon[1].style.display = 'none'
+        count = 1
+    }else{
+        icon[0].style.display = 'none'
+        icon[1].style.display = 'block'
+        count = 0
+    }
+}
+
 
 sliderRecently.addEventListener("mousedown", drageRecentlyStart)
 sliderRecently.addEventListener("mouseup", drageStop)

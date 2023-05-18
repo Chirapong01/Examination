@@ -72,9 +72,7 @@
             <div class="col-4">
                 <div class="nav-icon">
                     <span class="material-symbols-outlined m-1">
-                        <span class="material-symbols-outlined">
                             favorite
-                        </span>
                     </span>
                     <p> Favorite</p>
                 </div>
@@ -201,7 +199,7 @@
                         </div>
                         <div class="grid-item hovertext p-1">
                             <img class="w-100" src="/icon/creative.svg">
-                            <div class="p-2 pb-1"> Creative</div>
+                            <div class="p-2 pb-1"> Creative</div>Fav
                         </div>
                         <div class="grid-item hovertext p-1">
                             <img class="w-100" src="/icon/emotional.svg">
@@ -222,10 +220,13 @@
                     </div>
                     <div class="mt-3 favo">
                         <h3> 3Year+ </h3>
-                        <div class="favo-right mt-1">
-                            <span class="material-symbols-outlined" style="color:red">
+                        <div class="favo-right mt-1" onclick="favorite()">
+                            <span class="favo-icon material-symbols-outlined" style="color:red">
                                 favorite
                             </span>
+                            <span class="favo-icon material-icons" style="color:red; display: none;">
+                                favorite
+                                </span>
                             <div>
                                 Add to favorite
                             </div>
@@ -247,7 +248,7 @@
                                 </span>
                             </button>
                         </div>
-                        <div class="p-1"> pieces </div>
+                        <div class="p-1"> Pieces </div>
                     </div>
                     <div class="btn-product mt-5">
                         <button class="btn-cart">
@@ -266,7 +267,7 @@
                         <div class="star" onclick="star(3)">&#9734</div>
                         <div class="star" onclick="star(4)">&#9734</div>
                         <div class="star" onclick="star(5)">&#9734</div>
-                        <div style="padding-left: 30px;">Ratting</div>
+                        <div style="padding-left: 10px;">Ratting</div>
                     </div>
                 </div>
             </div>
@@ -368,20 +369,23 @@
                                 Sustainably made in Thailand using chemical-free rubberwood, formaldehyde-free glue,
                                 organic
                                 pigments and water-based dyes.
+                               
                             </li>
+                            <br>
                         </ul>
                     </div>
                 </div>
                 <div class="contrain ">
                     <div class="mt-3">
                         <ul>
-                            <h3>Factors for Child Development:</h3> <br>
+                            <h3>Factors for Child Development:</h3> 
                             Creative <br>
                             Imagination <br>
                             Social <br>
                             Language & Communication <br>
                             Coordination <br>
                             Emotional <br>
+                            <br>
                         </ul>
                     </div>
                 </div>
@@ -906,7 +910,7 @@
                     </div>
                 </div>
                 <div class="modal-footer" style="border-top: 0px;">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#oder-success "
+                    <button type="button" class="btn btn-buy" style="width: auto;" data-bs-toggle="modal" data-bs-target="#oder-success "
                         data-bs-dismiss="modal">PLACE ORDER</button>
                 </div>
             </div>
@@ -918,10 +922,13 @@
         <div class="modal-dialog" style="display:flex; justify-content: center; text-align: center;">
             <div class="modal-content" style="width: 300px;">
                 <div class="modal-body m-3" style="color:#198754;">
+                    <span style="font-size: 48px; color:#198754;" class="material-symbols-outlined">
+                        done
+                        </span>
                     <div>
                        <h3> Order Success</h3> 
                     </div>
-                    <button type="button" class="btn btn-success" data-bs-dismiss="modal" aria-label="Close">
+                    <button type="button" class="mt-2 btn btn-buy" style="margin: auto;" data-bs-dismiss="modal" aria-label="Close">
                         OK</button>
                 </div>
             </div>
